@@ -1,0 +1,6 @@
+book_filename: "mi-articulo"
+language:
+  label:
+    fig: "Figura"
+    tab: "Tabla"
+new_session: yes
