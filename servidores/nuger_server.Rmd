@@ -1,0 +1,51 @@
+# NuGet.Server
+
+**Article**: 07/11/2023  
+**8 contributors**
+
+## In this article
+
+- Create and deploy an ASP.NET Web application with NuGet.Server
+- Adding packages to the feed externally
+- Removing packages from the feed
+- Configuring the Packages folder
+- Show 3 more
+
+## Overview
+
+NuGet.Server is a package provided by the .NET Foundation that creates an ASP.NET application capable of hosting a package feed on any server running IIS. Essentially, NuGet.Server exposes a folder on the server through HTTP(S) using OData. It's straightforward to set up and ideal for simple scenarios.
+
+## Getting Started
+
+To create and deploy an ASP.NET Web application using NuGet.Server, follow these steps:
+
+### Create an empty ASP.NET Web application
+
+1. In Visual Studio, select **File > New > Project**.
+2. Search for **ASP.NET Web Application (.NET Framework)** and select the matching template for C#.
+3. Set the Framework to ".NET Framework 4.6".
+4. Choose the **Empty** template.
+
+### Adding NuGet.Server package
+
+1. Right-click on the project, select **Manage NuGet Packages**.
+2. Switch to the **Browse** tab, search for **NuGet.Server**, and install the latest version (ensure compatibility with .NET Framework 4.6).
+
+### Configuration and Deployment
+
+1. **Configure the Packages folder**: NuGet.Server automatically creates a Packages folder in your application and sets up necessary configurations in `web.config`.
+   
+   - Make sure to inspect `web.config` after installation to avoid duplicate elements that may cause issues.
+
+2. **Run locally**: Debug the project in Visual Studio (`Debug > Start Without Debugging` or `Ctrl+F5`). Verify the home page for package feed URLs.
+
+3. **Deployment**: Once tested locally, deploy the application to your desired server.
+
+### Example URL after deployment
+
+Once deployed to `http://<domain>`, the package source URL will be `http://<domain>/nuget`. [Visited repository](https://github.com/cartolin/Nuget-Server)
+## Further Assistance
+
+If you have any questions or encounter issues with NuGet.Server, visit [NuGet Gallery Issues](https://github.com/nuget/NuGetGallery/issues) to create an issue.
+
+This guide provides a comprehensive overview of setting up and using NuGet.Server to manage package feeds within ASP.NET applications.
