@@ -26,6 +26,11 @@ jobs:
       run: |
         Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook")'
 
+    - name: Move _book directory
+      run: |
+        mkdir _book
+        mv _main/* _book/
+
     - name: Clean up gh-pages branch
       run: |
         git fetch --prune --unshallow
