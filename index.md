@@ -1,13 +1,16 @@
 ---
-title: "Mi Artículo"
-author: "Autor"
-date: "2024-06-30"
+title: "Tecnología de la información"
+author: "Fidel Cartolin"
+date: "2024-07-01"
 output: bookdown::gitbook
 ---
 
 # Índice
 
-- [Introducción](01-introduccion.html)
-- [Sección 1](02-seccion-1.html)
-- [Sección 2](03-seccion-2.html)
-- [Conclusión](04-conclusion.html)
+## Servidores
+
+- [Nuget server](servidores/nuger_server.html)
+
+## Seguridad
+
+- [Herramientas de Seguridad](seguridad/herramientas.html)
