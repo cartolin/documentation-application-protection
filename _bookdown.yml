@@ -1,6 +1,6 @@
-book_filename: "mi-articulo"
-language:
-  label:
-    fig: "Figura"
-    tab: "Tabla"
-new_session: yes
+book_filename: "index"
+output_dir: "_book"
+before_build:
+after_success:
+delete_merged_branches: true
+new_variable: value
