@@ -26,6 +26,13 @@ jobs:
       run: |
         Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook")'
 
+    - name: Clean up gh-pages branch
+      run: |
+        git fetch --prune --unshallow
+        git checkout gh-pages
+        git reset --hard origin/gh-pages
+        git clean -dfx
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
